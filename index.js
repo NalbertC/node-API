@@ -3,24 +3,31 @@ const cors = require('cors')
 
 const app = express()
 
-app.listen(5500, () => console.log('Rodando na porta 5500'))
+/*====== SERVER ======*/
+app.listen(5501, () => console.log('Rodando na porta 5501'))
 
 app.use(cors())
 
+/*======== MIDLLEWARE ========*/
 app.use(express.json())
 
+/*====== USER LIST ======*/
 let users = [{
   id: 1,
-  name: "Jakeliny Gracielly",
-  avatar: "https://avatars.githubusercontent.com/u/17316392?v=4",
-  city: "São Paulo"
+  name: "Nalberth Castro",
+  avatar: "https://avatars.githubusercontent.com/u/104151247?v=4",
+  city: "Cametá",
+  email: "nalberthcastro1510@gmail.com",
+  password: "11223344",
+  login: "NalbertC"
 }]
 
-
+/*======= GENERAL GET =======*/
 app.route('/api').get((req, res) => res.json({
   users
 }))
 
+/*======== GET PARAMS ========*/
 app.route('/api/:id').get((req, res) => {
   const userId = req.params.id
 
@@ -33,17 +40,22 @@ app.route('/api/:id').get((req, res) => {
   res.json(user)
 })
 
+/*========= ADD USERS =========*/
 app.route('/api').post((req, res) => {
   const lastId = users[users.length - 1].id
   users.push({
     id: lastId + 1,
     name: req.body.name,
     avatar: req.body.avatar,
-    city: req.body.city
+    city: req.body.city,
+    email: req.body.email,
+    password: req.body.password,
+    login: req.body.login
   })
   res.json('Saved user')
 })
 
+/*============ UPDATE USER ===========*/
 app.route('/api/:id').put((req, res) => {
   const userId = req.params.id
 
@@ -57,7 +69,10 @@ app.route('/api/:id').put((req, res) => {
     ...user,
     name: req.body.name,
     avatar: req.body.avatar,
-    city: req.body.city
+    city: req.body.city,
+    email: req.body.email,
+    password: req.body.password,
+    login: req.body.login
   }
 
   users = users.map(user => {
@@ -70,6 +85,7 @@ app.route('/api/:id').put((req, res) => {
   res.json("Updated user")
 })
 
+/*======= DELETE USER =======*/
 app.route('/api/:id').delete((req, res) => {
   const userId = req.params.id
 
