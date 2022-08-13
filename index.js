@@ -35,7 +35,7 @@ let users = [{
   name: "Klebson Carmo",
   avatar: "https://avatars.githubusercontent.com/u/104224959?v=4",
   city: "Cametá",
-  email: "klebsoncarmo@gmail.com",
+  email: "kleb.silva11@gmail.com",
   password: "11223344",
   login: "klebsoncarmo"
 },
