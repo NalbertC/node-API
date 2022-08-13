@@ -20,6 +20,42 @@ let users = [{
   email: "nalberthcastro1510@gmail.com",
   password: "11223344",
   login: "NalbertC"
+},
+{
+  id: 2,
+  name: "Vitória Peres",
+  avatar: "https://avatars.githubusercontent.com/u/103939241?v=4",
+  city: "Cametá",
+  email: "vndp@gmail.com",
+  password: "11223344",
+  login: "vndp"
+},
+{
+  id: 3,
+  name: "Klebson Carmo",
+  avatar: "https://avatars.githubusercontent.com/u/104224959?v=4",
+  city: "Cametá",
+  email: "klebsoncarmo@gmail.com",
+  password: "11223344",
+  login: "klebsoncarmo"
+},
+{
+  id: 4,
+  name: "Lacyene Melo",
+  avatar: "https://avatars.githubusercontent.com/u/89089202?v=4",
+  city: "Cametá",
+  email: "lacymelo@gmail.com",
+  password: "11223344",
+  login: "lacymelo"
+},
+{
+  id: 5,
+  name: "Leonardo Nunes",
+  avatar: "https://avatars.githubusercontent.com/u/12619438?v=4",
+  city: "Cametá",
+  email: "gnleo@gmail.com",
+  password: "11223344",
+  login: "gnleo"
 }]
 
 /*======= GENERAL GET =======*/
